@@ -36,9 +36,9 @@ class LogInActivity : AppCompatActivity() {
             if(task.isSuccessful){
                 val intent = Intent(this,HomePageActivity::class.java)
                 startActivity(intent)
-                finish()
-                val currentUser = auth.currentUser
                 Toast.makeText(this,"Successfully Logged in",Toast.LENGTH_SHORT).show()
+                finish()
+
             }
             else{
                 Toast.makeText(this,task.exception.toString(),Toast.LENGTH_SHORT).show()

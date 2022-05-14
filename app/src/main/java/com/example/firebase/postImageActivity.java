@@ -1,4 +1,5 @@
 package com.example.firebase;
+import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
@@ -29,23 +30,23 @@ import com.google.firebase.storage.UploadTask;
 
 public class postImageActivity extends AppCompatActivity {
     private Button postCont;
-    private Button homePage;
     private ImageView SecondImageView;
     private Uri imageUri;
-    private EditText PostDescription;
-    private EditText PostCaption;
+    private EditText itemPrice;
+    private EditText itemAge;
+    private EditText itemRate;
+    private EditText itemName;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.upload_image);
-        homePage = findViewById(R.id.btHomePage);
         postCont = findViewById(R.id.postBtn);
         SecondImageView = findViewById(R.id.SecondImageView);
-        PostDescription = findViewById(R.id.postDescription);
-        PostCaption = findViewById(R.id.captionPost);
-
-
+        itemName = findViewById(R.id.captionPost);
+        itemPrice = findViewById(R.id.itemPrice);
+        itemRate = findViewById(R.id.itemRate);
+        itemAge = findViewById(R.id.itemAge);
         SecondImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,34 +56,34 @@ public class postImageActivity extends AppCompatActivity {
                 startActivityForResult(galleryInt,2);
             }
         });
-        homePage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(postImageActivity.this,HomePageActivity.class);
-                startActivity(intent);
-//
-            }
-        });
+
         postCont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                //method for posting the contents to database called posts.
                if (imageUri!=null){
                    postContent(imageUri);
-               }
-            }
+               }}
         });
     }
-
     private void postContent( Uri uri) {
-        StorageReference fileRef = FirebaseStorage.getInstance().getReference("Profile"+getFileExtension(uri));
+        StorageReference fileRef = FirebaseStorage.getInstance().getReference("gallery/"+getFileExtension(uri));
         fileRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                        PostedCont postedCont = new PostedCont(uri.toString(),PostDescription.getText().toString(),PostCaption.getText().toString());
+                        String currentVal = itemPrice.getText().toString();
+                        String age = itemAge.getText().toString();
+                        String rate = itemRate.getText().toString();
+                        int currVal = Integer.parseInt(currentVal);
+                        int ag = Integer.parseInt(age);
+                        int rt = Integer.parseInt(rate);
+                        Integer futureVal = (currVal*(1+(rt*ag)));
+                        String ftr = String.valueOf(futureVal);
+                        String margin = String.valueOf(futureVal-currVal);
+                        Model postedCont = new Model(uri.toString(),itemName.getText().toString(),currentVal,age,ftr,rate,margin);
                         FirebaseUser myUser = FirebaseAuth.getInstance().getCurrentUser();
                         if(myUser!=null){
                             String uid= myUser.getUid();
@@ -92,7 +93,7 @@ public class postImageActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Void unused) {
                                     Toast.makeText(postImageActivity.this,"UPLOADING SUCCESS!!",Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(postImageActivity.this,GalleryActivity.class);
+                                    Intent intent = new Intent(postImageActivity.this,ScrollersActivity.class);
                                     startActivity(intent);
                                     finish();
 
@@ -139,5 +140,5 @@ public class postImageActivity extends AppCompatActivity {
             imageUri = data.getData();
             SecondImageView.setImageURI(imageUri);
         }
-    }
+}
 }

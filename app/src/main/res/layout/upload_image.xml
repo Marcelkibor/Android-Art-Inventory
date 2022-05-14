@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/selector"
     android:layout_height="match_parent"
     tools:context=".postImageActivity">
 
@@ -23,58 +23,111 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:textColor="@color/white"
-        android:text="@string/select_image"
+        android:text="Add item"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/SecondImageView"
-        android:layout_width="419dp"
-        android:layout_height="229dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/image"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lyCaption"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/gray"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SecondImageView">
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/captionPost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Insert caption"
+        android:hint="Item Name"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="255dp" />
+
+
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lyDescription"
         android:layout_width="match_parent"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
         android:layout_height="70dp"
+        android:background="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SecondImageView">
+        app:layout_constraintTop_toBottomOf="@+id/lyCaption">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/postDescription"
+            android:id="@+id/itemPrice"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Image Description"
+            android:hint="Item Price"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="255dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lyRate"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="70dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lyDescription">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edRate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Age(Yrs)"
             android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="255dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutAge"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="70dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lyDescription">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/itemAge"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Age(Yrs)"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="255dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutRate"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAge">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/itemRate"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Rate(%)"
+            android:inputType="numberDecimal"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="255dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -85,20 +138,29 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="44dp"
-        android:backgroundTint="@color/yellow"
-        android:text="POST"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FF5722"
+        android:text="GET SCORE"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lyDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/lyImageview" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btHomePage"
+    <LinearLayout
+        android:id="@id/lyImageview"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/yellow"
-        android:text="Home"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFC107"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postBtn" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/layoutRate">
+
+        <ImageView
+            android:id="@+id/SecondImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/image"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

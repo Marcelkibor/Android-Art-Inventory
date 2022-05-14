@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    tools:context=".GalaDisplay"
+    android:focusable="true"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:text="Inventory"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/galImage"
+            android:layout_width="203dp"
+            android:layout_height="85dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
+            android:foregroundGravity="left"
+            android:src="@mipmap/ic_launcher"
+            android:text="Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toEndOf="@+id/galTitle"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+        <TextView
+            android:id="@+id/galTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toStartOf="@+id/galImage"
+            android:text="name:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/galImage" />
+
+
+        <TextView
+            android:id="@+id/galTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="50dp"
+            android:layout_toStartOf="@+id/galImage"
+            android:layout_marginStart="20dp"
+            android:text="FUTURE VALUE:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/galImage" />
+
+        <TextView
+            android:id="@+id/scoreHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvfutureValue"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="60dp"
+            android:layout_toStartOf="@+id/galImage"
+            android:text="SCORE"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/galTitle3"
+            app:layout_constraintTop_toTopOf="@+id/galTitle3" />
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/galTitle"
+            android:layout_alignParentStart="true"
+            android:text="monalisa"
+            android:layout_marginStart="20dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/galTitle"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/tvMarginTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/galTitle"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:text="MARGIN"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/tvMarginTxt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/galImage"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="CUURENT VALUE:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMarginTxt"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/tvScoreLimit"
+            android:layout_width="99dp"
+            android:layout_height="28dp"
+            android:layout_below="@+id/scoreHolder"
+            android:layout_alignParentStart="true"
+            android:text="bad score"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/scoreHolder"
+            app:layout_constraintTop_toBottomOf="@+id/scoreHolder"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/tvMargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scoreHolder"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="200dp"
+            android:layout_marginBottom="10dp"
+            android:text="1202"
+            android:textColor="@color/blue"
+            android:textSize="30sp"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvcurrent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pieChart"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/tvcurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scoreHolder"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="-10dp"
+            android:text="1202"
+            android:textColor="#FFC107"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMarginTxt2"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/tvfutureValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/galTitle3"
+            android:layout_alignParentStart="true"
+            android:text="123313"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/galTitle3"
+            tools:ignore="InvalidId" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="131dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="-30dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/coin"
+            app:layout_constraintStart_toStartOf="@+id/tvfutureValue"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemName" />
+        <com.androidplot.pie.PieChart
+            android:id="@+id/pieChart"
+            style="@style/APDefacto.Light"
+            android:layout_width="242dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="104dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/galImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

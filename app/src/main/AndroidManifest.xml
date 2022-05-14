@@ -25,11 +25,15 @@
             android:exported="true"/>
         <activity android:name=".myProfile"
             android:exported="true"/>
-        <activity android:name=".HomePageActivity"
-            android:exported="true"/>
         <activity android:name=".postImageActivity"
             android:exported="true"/>
-        <activity android:name=".GalleryActivity"
+        <activity android:name=".GalaDisplay"
+            android:exported="true"/>
+        <activity android:name=".ScrollersActivity"
+            android:exported="true"/>
+        <activity android:name=".HomePageActivity"
+            android:exported="false"/>
+        <activity android:name="PickerActivity"
             android:exported="true"/>
     </application>
 </manifest>

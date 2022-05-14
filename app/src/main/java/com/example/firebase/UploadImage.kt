@@ -44,11 +44,7 @@ class UploadImage : AppCompatActivity() {
         binding.SecondImageView.setOnClickListener() {
             getImage.launch("image/*")
         }
-        binding.btHomePage
-            .setOnClickListener(){
-            val intent = Intent(this,myProfile::class.java)
-            startActivity(intent)
-        }
+
     }
     private fun postContent() {
         val storageRef = FirebaseStorage.getInstance().getReference("images")

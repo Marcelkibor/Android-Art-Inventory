@@ -3,18 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/drawable/home_shape.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/SingleProfile.xml" value="0.1" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/fragment_paint.xml" value="0.1286231884057971" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/fragment_st.xml" value="0.13489583333333333" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/fragment_steel.xml" value="0.1286231884057971" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/fragment_stone.xml" value="0.1286231884057971" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/fragment_wood.xml" value="0.1286231884057971" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/gala-display.xml" value="0.25" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/galadisplay.xml" value="0.16" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/gallery_profile.xml" value="0.16" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/homePage.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/home_page.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/home_page.xml" value="0.18" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/home_page_second.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/login.xml" value="0.22" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/make_prediction.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/paint_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/scrollers_activity.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/singlePost.xml" value="0.13489583333333333" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/single_profile.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/upload_image.xml" value="0.1" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/steel_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/stone_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/upload_image.xml" value="0.25" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/uploan_image.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/user_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/layout/wood_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/kibor/AndroidStudioProjects/Firebase/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2203125" />
       </map>
     </option>
